@@ -1,8 +1,6 @@
 Skip to content
 Search or jump to…
 
-.idea
-__pycache__
 
 Pull requests
 Issues
@@ -168,6 +166,11 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
+test.py
+.idea
+__pycache__
+test.html
+
 # Cython debug symbols
 cython_debug/
 © 2021 GitHub, Inc.
@@ -182,3 +185,5 @@ API
 Training
 Blog
 About
+
+
