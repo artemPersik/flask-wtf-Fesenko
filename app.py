@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def start():
-    return "http://127.0.0.1:8080/index/название"  # с заботой о вас)))
+    return "http://127.0.0.1:8080/index/название"  # с заботой о вас))
 
 
 @app.route('/index/<title>')
