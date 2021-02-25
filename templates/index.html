@@ -12,7 +12,20 @@
     <body>
         <h1>Миссия Колонизация Марса</h1>
         <h4>И на Марсе будут яблони цвести!</h4>
-        <h3>научные симуляторы</h3>
-        <img src="{{ schem }}">
+        {% if param == "ol" %}
+            <ol>
+                {% for i in jobs %}
+                    <li>{{ i }}</li>
+                {% endfor %}
+            </ol>
+        {% elif param == "ul" %}
+            <ul>
+                {% for i in jobs %}
+                    <li>{{ i }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div>такого нет</div>
+        {% endif %}
     </body>
 </html>
