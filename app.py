@@ -12,8 +12,11 @@ def start():
 
 @app.route('/list_prof/<param>')
 def index(param):
-    jobs = ["врач", "инженер", "сантехник", "бомж", "пилот", "биолог"]
-    return render_template("index.html", jobs=jobs, param=param)
+    if param == "ol" or param == "ul":
+        jobs = ["врач", "инженер", "сантехник", "бомж", "пилот", "биолог"]
+        return render_template("index.html", jobs=jobs, param=param)
+    else:
+        return f"""<img src="{url_for('static', filename='img/error.png')}">"""
 
 
 if __name__ == '__main__':
