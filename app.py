@@ -14,8 +14,7 @@ def start():
 @app.route('/training/<prof>')
 def index(prof):
     profs = {"врач": url_for('static', filename='img/doctor.png'),
-             "инженер": url_for('static', filename='img/ingener.png'),
-             "сантехник": url_for('static', filename='img/santeh.png')}
+             "инженер": url_for('static', filename='img/ingener.png')}
     
     for i in profs:
         if i in prof.lower():
