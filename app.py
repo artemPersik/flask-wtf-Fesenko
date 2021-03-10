@@ -16,12 +16,13 @@ def index(prof):
     profs = {"врач": url_for('static', filename='img/doctor.png'),
              "инженер": url_for('static', filename='img/ingener.png'),
              "сантехник": url_for('static', filename='img/santeh.png')}
-
-    if prof.lower() in profs:
-        print(profs[prof])
-        return render_template("index.html", schem=profs[prof])
-    else:
-        return render_template('index.html', schem=url_for('static', filename='img/error.png'))
+    
+    for i in profs:
+        if i in prof.lower():
+            print(profs[prof])
+            return render_template("index.html", schem=profs[prof])
+        else:
+            return render_template('index.html', schem=url_for('static', filename='img/error.png'))
 
 
 if __name__ == '__main__':
